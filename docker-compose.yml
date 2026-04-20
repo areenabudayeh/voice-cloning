@@ -1,0 +1,28 @@
+
+services:
+
+  backend:
+    build:
+      context: .
+      dockerfile: docker/backend.Dockerfile
+    container_name: voiceclone-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./storage:/app/storage
+    environment:
+      - USE_GPU=false
+      - WHISPER_SIZE=base
+      - ALLOWED_ORIGINS=["http://localhost"]
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: docker/frontend.Dockerfile
+    container_name: voiceclone-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
