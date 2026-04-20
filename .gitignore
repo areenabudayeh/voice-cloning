@@ -3,11 +3,6 @@ __pycache__/
 venv/
 .venv/
 
-storage/uploads/*
-storage/outputs/*
-!storage/uploads/.gitkeep
-!storage/outputs/.gitkeep
-
 .env
 
 frontend/node_modules/
