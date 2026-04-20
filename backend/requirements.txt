@@ -1,0 +1,25 @@
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+python-multipart==0.0.9
+pydantic==2.7.1
+pydantic-settings==2.2.1
+
+soundfile==0.12.1
+librosa==0.10.2
+pydub==0.25.1
+noisereduce==3.0.3
+
+numpy==1.26.4
+torch==2.1.0
+torchaudio==2.1.0
+
+transformers==4.46.3
+tokenizers==0.20.3
+huggingface_hub==0.36.2
+
+coqpit-config
+
+TTS @ git+https://github.com/coqui-ai/TTS@dbf1a08a0d4e47fdad6172e433eeb34bc6b13b4e
+
+jiwer==3.0.4
+openai-whisper==20250625
